@@ -1,0 +1,334 @@
+/*  M: Miri
+    L: Lely
+    B: White
+    p: Pooh
+     Q&A: Adri  */
+
+  /* L: Cada vez que SE haga una sección escribe
+   un comentario que ponga al principio "inicio seccion X" y al final "inicio seccion X" */
+
+  /* L: FUENTES */
+    /* font-family: 'Orbitron', sans-serif; 
+    font-family: 'VT323', monospace; */
+   /* L: FUENTES: font-family: 'Share Tech Mono', monospace; */
+    
+   /* BODY GENERAL */
+   *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Share Tech Mono', monospace;
+     /* border: 1px solid magenta;   */
+    }
+
+    :root {
+        --blue: #8ED8E7;
+        --black:#000000;
+      }
+      body,
+      html {
+        padding: 0;
+        margin: 0;
+        height: 100vh;
+        color: var(--blue);
+      }
+
+      body {
+        background: linear-gradient(#333, #333),
+          repeating-linear-gradient(
+            -45deg,
+            transparent 4px,
+            transparent 0,
+            transparent 9px
+          ),
+          linear-gradient(rgba(0, 0, 0, 0.5) 1px, rgba(255, 200, 0, 0.1) 2px),
+          linear-gradient(to right, transparent 9px, #004),
+          linear-gradient(#001 9px, #004);
+
+        background-size: 8px 100%, 296px 7px, 100% 2px, 10px 10px, 10px 10px;
+        background-position: 0, 99.5%, 0 0, 0 0, 0 0;
+        background-repeat: repeat-y, no-repeat, repeat, repeat, repeat;
+        clip-path: polygon(
+          0 0,
+          100% 0px,
+          100% calc(100% - 30px),
+          calc(100% - 30px) 100%,
+          0 100%,
+          0 50%,
+          10px calc(25% + 10px),
+          0 25%
+        );
+        overflow: hidden;
+      }
+      
+      /* BODY GENERAL */
+  
+      /* ANIMACIONES */
+        /*GLITCH */
+      @keyframes glitch {
+        0% {
+          clip-path: var(--slice-1);
+          transform: translate(-20px, -10px);
+        }
+      
+        10% {
+          clip-path: var(--slice-3);
+          transform: translate(10px, 10px);
+        }
+      
+        20% {
+          clip-path: var(--slice-1);
+          transform: translate(-10px, 10px);
+        }
+      
+        30% {
+          clip-path: var(--slice-3);
+          transform: translate(0px, 5px);
+        }
+      
+        40% {
+          clip-path: var(--slice-2);
+          transform: translate(-5px, 0px);
+        }
+      
+        50% {
+          clip-path: var(--slice-3);
+          transform: translate(5px, 0px);
+        }
+      
+        60% {
+          clip-path: var(--slice-4);
+          transform: translate(5px, 10px);
+        }
+      
+        70% {
+          clip-path: var(--slice-2);
+          transform: translate(-10px, 10px);
+        }
+      
+        80% {
+          clip-path: var(--slice-5);
+          transform: translate(20px, -10px);
+        }
+      
+        90% {
+          clip-path: var(--slice-1);
+          transform: translate(-10px, 0px);
+        }
+      
+        100% {
+          clip-path: var(--slice-1);
+          transform: translate(0);
+        }
+      }
+         /*GLITCH */
+      /* LOGO FLOTANDO */
+      @keyframes floating {
+        0% {
+            transform: translate3d(0, 0, 0);	
+        }
+        45% {
+            transform: translate3d(0, -10%, 0);	
+        }
+      55% {
+            transform: translate3d(0, -10%, 0);	
+        }	
+        100% {
+            transform: translate3d(0, 0, 0);
+        }			
+    }
+       /* LOGO FLOTANDO */
+      /* ANIMACIONES */
+    
+      a:link,
+      a:visited {
+        text-decoration: none;
+        color: inherit;
+      }
+      
+      #Landing {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100%;
+        height: auto;
+        margin: 20px;
+        z-index: 1;
+      }
+      #border {
+        background: var(--blue);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        width: calc(100% - 36px);
+        clip-path: polygon(
+          0 0,
+          100% 0px,
+          100% calc(100% - 30px),
+          calc(100% - 30px) 100%,
+          0 100%,
+          0 50%,
+          10px calc(50% - 10px),
+          10px calc(25% + 10px),
+          0 25%
+        );
+      }
+
+      #wrapper {
+        position: absolute;
+        top: 2px;
+        bottom: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: calc(100% - 4px);
+        background: linear-gradient(#333, #333),
+          repeating-linear-gradient(
+            -45deg,
+            transparent 4px,
+            #530 0,
+            #530 6px,
+            transparent 0,
+            transparent 9px
+          ),
+          linear-gradient(rgba(0, 0, 0, 0.5) 1px, rgba(255, 200, 0, 0.1) 2px),
+          linear-gradient(to right, transparent 9px, #004),
+          linear-gradient(#001 9px, #004);
+        background-size: 8px 100%, 296px 7px, 100% 2px, 10px 10px, 10px 10px;
+        background-position: calc(100% - 7px) 0, 99.5% calc(100% - 3px), 0 0, 0 0, 0 0;
+        background-repeat: repeat-y, no-repeat, repeat, repeat, repeat;
+        clip-path: polygon(
+          0 0,
+          100% 0px,
+          100% calc(100% - 30px),
+          calc(100% - 30px) 100%,
+          0 100%,
+          0 50%,
+          10px calc(50% - 10px),
+          10px calc(25% + 10px),
+          0 25%
+        );
+        overflow: hidden;
+      }
+      #scroller {
+        position: absolute;
+        top: 0;
+        bottom: 15px;
+        width: calc(100% - 28px);
+        padding-right: 35px;
+        overflow: hidden;
+        color: var(--blue);
+      }
+      #content {
+        position: relative;
+        box-sizing: initial;
+        display: block;
+        width: 100%;
+        height: 100%;
+        padding-top: 20px;
+        padding-left: 20px;
+        padding-right: 25px;
+        overflow-y: scroll;
+      }
+        #scrollbar {
+        display: block;
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        width: 10px;
+        height: 50px;
+        background: var(--blue);
+        z-index: 2;
+      }
+      #scrollbar:hover {
+        background: var(--blue);
+      }
+      #scrollbar:hover:after {
+        border-top: 10px solid var(--blue);
+      }
+      #scrollbar::after {
+        display: block;
+        position: absolute;
+        content: " ";
+        top: 100%;
+        left: 0;
+        border-top: 10px solid var(--blue);
+        border-right: 10px solid transparent;
+        z-index: 2;
+      }
+
+      .logo  {
+       display: flex;
+       justify-content: center;
+        
+      }
+      
+      .logo img {
+        width: 60%;
+        height: auto;
+        animation: floating 3s ease-in-out infinite;
+      }
+      
+      /* --- BUTTON --- */
+    
+
+      #buttons {
+             display: flex;
+             justify-content: space-between;
+             flex-wrap: wrap;
+            text-align: center;
+      }
+      .button {
+        margin: 40px;
+      }
+      .button,
+      .button::after {
+        width: 320px;
+        height: 80px;
+        font-size: 27px;
+        background: linear-gradient(45deg, transparent 5%, rgb(4, 14, 48) 5%);
+        border: 0;
+        color: #00ffff;
+        letter-spacing: 2px;
+        line-height: 88px;
+        box-shadow: 6px 0 0 #00e6f6;
+        position: relative;
+      }
+      
+      .button::after {
+        --slice-0: inset(50% 50% 50% 50%);
+        --slice-1: inset(80% -6px 0 0);
+        --slice-2: inset(50% -6px 30% 0);
+        --slice-3: inset(10% -6px 85% 0);
+        --slice-4: inset(40% -6px 43% 0);
+        --slice-5: inset(80% -6px 5% 0);
+        content: "EDGESK8";
+        display: block;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(
+          45deg,
+          transparent 3%,
+          #00e6f6 3%,
+          #00e6f6 5%,
+          #FF10F0 3%
+        );
+        text-shadow: -3px -3px 0 #f8f005, 3px 3px 0 #00e6f6;
+        clip-path: var(--slice-0);
+      }
+      .button:hover::after {
+        animation: glitch 1s;
+        animation-timing-function: steps(2, end);
+      }
+      
+      @media screen and (max-width: 690px) {
+
+        #buttons {
+             display: flex;
+             flex-direction: column;
+        }
+        
+    }
