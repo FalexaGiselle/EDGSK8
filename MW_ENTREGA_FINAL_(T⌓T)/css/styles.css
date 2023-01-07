@@ -366,7 +366,6 @@
             .menu{
               position: fixed;
               background-color: black;
-              border: 1px solid var(--green);
               width: 100%;
               z-index: 9999;
             }
@@ -387,7 +386,7 @@
 
             #menu > ul > li > a,
             #menu > i {
-              color: var(--green);
+              color: var(--blue);
               text-decoration: none;
             }
 
@@ -437,6 +436,18 @@
         z-index: 100;
        }
 
+       #intro_2{
+        background-color: var(--black);
+        flex-direction: column;
+        height: calc(100vh - 3em);
+       }
+
+       #intro_2 .name{
+        position: absolute;
+        justify-content: center;
+        text-align: center;
+        z-index: 100;
+       }
 
 
      video{
@@ -448,7 +459,21 @@
       
       
     }
-    
+
+    #INFO2{
+      margin: 2em;
+      
+      
+    }
+    #INFO2  div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      flex-wrap: nowrap;
+    }
+
     #INFO1  div {
       display: flex;
       flex-direction: column;
@@ -787,7 +812,6 @@
 		box-shadow: 3px 3px rgb(202, 202, 202);
 		line-height: 50px;
 		font-size: 30px;
-		font-family: sans-serif;
 		border-radius: 5px;
 		cursor: pointer;
 	}
@@ -821,6 +845,68 @@
 	}
 
  /* FIN JUEGO */
+
+ /* TIENDA */
+ 
+ #tienda{
+  text-align: center;
+  color: var(--blue);
+  padding: 50px 0px;
+}
+#tienda > h1{
+  font-size: 3em;
+}
+#articulos{
+  display: flex;
+    flex-direction: row;
+    JUSTIFY-CONTENT: center;
+    flex-wrap: wrap;;
+}
+.articulo{
+  border-radius: 25px;
+    width: 17em;
+    height: 23em;
+    margin: 5em;
+    background-color: var(--black);
+    border: 1px solid var(--blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: floating 3s ease-in-out infinite;
+    box-shadow: 2px 10px 10px rgba(92, 141, 237, 0.59);
+}
+.articulo > h2{
+  padding: 25px 0px;
+  font-size: 22px;
+  color: var(--blue);
+  text-shadow: 1px 1px 2px black, 0 0 25px var(--blue), 0 0 5px var(--blue);
+}
+.articulo > img{
+  width: 80%;
+  border-radius: 50px;
+}
+.articulo > a {
+  width: 11em;
+    height: 3em;
+    line-height: 50px;
+    font-size: 1em;
+    color: var(--blue);
+    background: var(--black);
+    border: 2px solid var(--blue);
+    display: inline-block;
+    border-radius: 18px;
+    margin: 5px;
+    cursor: pointer;
+    user-select: none;
+}
+.articulo > a:hover{
+  background-color: var(--blue);
+  border-color: var(--black);
+  color: var(--black);
+}
+ 
+ /* TIENDA */
 
  @media screen and (max-width: 690px) {
 
@@ -918,5 +1004,13 @@ justify-content: center;
 video{
 width: 100%;
 }
+
+}
+
+@media screen and (max-width: 400px) {
+
+ h1{
+  font-size: 2.4em;
+ }
 
 }
