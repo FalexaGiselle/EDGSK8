@@ -226,7 +226,7 @@
                             $('.cat').css({
                                 "top": $(window).height() / 2 - 25,
                                 "left": $(window).width() / 2 - 25,
-                                "-webkit-transform": "none"
+                                "transform": "none"
                             })[0].className = "cat";
                             $(".pause-menu").hide();
                             $(".start-menu").show();
@@ -284,8 +284,7 @@
             
                         var currLeft = $(".left-goalkeeper").position().top;
                         var currRight = $(".right-goalkeeper").position().top;
-            
-                        // the faster the cat moves, the faster the goalkeepers should be allowed to move right?
+        
                         var speed = Math.abs(speedY);
             
                         if(pressedKeys[keys.w]){
@@ -336,10 +335,6 @@
                         }
                         if($(leftHit).hasClass("goalkeeper")){
                             speedX *= -1;
-                            // so on next round cat will move speedX + acceleration
-                            // so upper if statement will not work properly, it will change cats direction
-                            // then it will still stay in range and it'll change X again and again
-                            // so lets add 0.1px so it gets out of the range
                             var value = Math.abs(speedX);
                             newX += value;
             
@@ -384,8 +379,6 @@
                             var acc = Cat.acceleration;
             
                             var tmpLevel = speedLevel;
-                            // from speed > 5 to speed > 10, acceleration should be 0.001
-                            // but after that, decrease acceleration 10 times on every 5 speed
                             while(tmpVal > 10){
                                 acc /= 10;
                                 tmpLevel++;
@@ -474,23 +467,6 @@
                             $(".left-score-overflow").fadeOut(200);
                         },200);
             
-                        // var realScore = $(".left-score");
-                        // var fakeScore = $("<div class='left-score'>" + n + "</div>").appendTo($(".scores"));
-            
-                        // $(realScore).animate({
-                        //  top: -48
-                        // },500);
-            
-                        // $(fakeScore).animate({
-                        //  top: -48
-                        // },500);
-            
-                        // setTimeout(function(){
-                        //  $(realScore).remove();
-                        //  setTimeout(function(){
-                        //      $(fakeScore).css("top","0px");
-                        //  },30);
-                        // },500);
                     },
                     setRight: function(n){
                         n = n || 0;
@@ -504,23 +480,6 @@
                             $(".right-score-overflow").fadeOut(200);
                         },200);
             
-                        // var realScore = $(".right-score");
-                        // var fakeScore = $("<div class='right-score'>" + n + "</div>").appendTo($(".scores"));
-            
-                        // $(realScore).animate({
-                        //  top: -48
-                        // },500);
-            
-                        // $(fakeScore).animate({
-                        //  top: -48
-                        // },500);
-            
-                        // setTimeout(function(){
-                        //  $(realScore).remove();
-                        //  setTimeout(function(){
-                        //      $(fakeScore).css("top","0px");
-                        //  },10);
-                        // },500);
                     },
                     getLeft: function(){
                         return parseInt($(".left-score span").text());
@@ -568,8 +527,6 @@
                         var top = catPos.top;
                         var left = catPos.left;
             
-                        // i guess the only solid way to check if the game has not started yet.
-                        // YES, i was too lazy to create 1 variable containing game status
                         if(top == $(window).height() / 2 - 25 && left == $(window).width() / 2 - 25 && $(".start-menu").css("display") == "none") Cat.start();
                     }
                     if(pressedKeys[keys.r]){

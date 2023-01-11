@@ -33,7 +33,5 @@ if (Math.sign == undefined) {
 	}
 }
 
-// .player-button are the first two buttons
-// [ 1 Player Mode ]
-// [ 2 Player Mode ]
-// so, just get which one was clicked and set singlePlayer mode
+// Audio para ambientar
+

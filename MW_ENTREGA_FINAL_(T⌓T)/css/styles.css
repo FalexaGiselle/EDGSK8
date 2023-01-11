@@ -8,15 +8,12 @@
    un comentario que ponga al principio "inicio seccion X" y al final "inicio seccion X" */
 
   /* L: FUENTES */
-    /* font-family: 'Orbitron', sans-serif; 
-    font-family: 'VT323', monospace; */
    /* L: FUENTES: font-family: 'Share Tech Mono', monospace; */
     
    /* BODY GENERAL */
    *{
     margin: 0;
     padding: 0;
-
     scroll-behavior: smooth;
     font-family: 'Share Tech Mono', monospace;
       /* border: 1px solid magenta;    */
@@ -507,6 +504,27 @@
       flex-direction: column;
       
     }
+
+
+    .INFO_1   a {
+      width: 11em;
+        height: 3em;
+        line-height: 50px;
+        font-size: 1em;
+        color: var(--blue);
+        background: var(--black);
+        border: 2px solid var(--blue);
+        display: inline-block;
+        border-radius: 18px;
+        margin: 5px;
+        cursor: pointer;
+        user-select: none;
+    }
+    .INFO_1  a:hover{
+      background-color: var(--blue);
+      border-color: var(--black);
+      color: var(--black);
+    }
     
     .INFO_2  div {
       padding-top: 1em;
@@ -681,8 +699,6 @@
 	}
 
 	.left-score-overflow,.right-score-overflow {
-		background: -webkit-linear-gradient(rgb(237, 31, 36) 0%, rgb(237, 31, 36) 16%, rgb(248, 152, 29) 16%, rgb(248, 152, 29) 33%, rgb(243, 236, 25) 33%, rgb(243, 236, 25) 50%, rgb(113, 191, 68) 50%, rgb(113, 191, 68) 67%, rgb(71, 144, 205) 67%, rgb(71, 144, 205) 83%, rgb(94, 87, 166) 83%, rgb(94, 87, 166) 100%);
-		background: -o-linear-gradient(rgb(237, 31, 36) 0%, rgb(237, 31, 36) 16%, rgb(248, 152, 29) 16%, rgb(248, 152, 29) 33%, rgb(243, 236, 25) 33%, rgb(243, 236, 25) 50%, rgb(113, 191, 68) 50%, rgb(113, 191, 68) 67%, rgb(71, 144, 205) 67%, rgb(71, 144, 205) 83%, rgb(94, 87, 166) 83%, rgb(94, 87, 166) 100%);
 		background: linear-gradient(rgb(237, 31, 36) 0%, rgb(237, 31, 36) 16%, rgb(248, 152, 29) 16%, rgb(248, 152, 29) 33%, rgb(243, 236, 25) 33%, rgb(243, 236, 25) 50%, rgb(113, 191, 68) 50%, rgb(113, 191, 68) 67%, rgb(71, 144, 205) 67%, rgb(71, 144, 205) 83%, rgb(94, 87, 166) 83%, rgb(94, 87, 166) 100%);
 		position: absolute;
 		top: 0;
@@ -796,7 +812,6 @@
     background: var(--black);
     border: 1px solid var(--blue);
     display: inline-block;
-    font-family: sans-serif;
     border-radius: 5px;
     margin: 5px;
     cursor: pointer;
@@ -897,7 +912,7 @@
   width: 80%;
   border-radius: 50px;
 }
-.stock > a {
+.stock  a {
   width: 11em;
     height: 3em;
     line-height: 50px;
